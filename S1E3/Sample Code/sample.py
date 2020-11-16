@@ -41,7 +41,29 @@ else:
 Basic Salary <= 10000 : HRA = 20%, DA = 80%
 Basic Salary <= 20000 : HRA = 25%, DA = 90%
 Basic Salary > 30000 : HRA = 30%, DA = 95%
+
+Gross Salary = Basic Salary + HRA + DA
 '''
+
+basic_salary = int(input("Enter your Basic Salary"))
+
+hra = 0
+da = 0
+gross_salary = 0
+
+if basic_salary > 0:
+    if basic_salary <= 10000:
+        hra = .2
+        da = .8
+    elif basic_salary > 10000 and basic_salary <= 20000: 
+        hra = .25
+        da = .9
+    else:
+        hra = .3
+        da = .95
+
+    gross_salary = basic_salary + basic_salary * hra + basic_salary * da
+
 
 # Practice 1: Input three numbers from the user and print the greatest number
 # Practice 2: Input a year and print if the year is a leap year or not a leap year
